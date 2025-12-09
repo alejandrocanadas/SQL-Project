@@ -16,7 +16,6 @@ WITH top_20_paying_jobs AS(
         LEFT JOIN company_dim AS cd ON cd.company_id = jpf.company_id
     WHERE (
             jpf.job_title_short LIKE '%Data Analyst%'
-            AND jpf.job_work_from_home = TRUE
         )
         AND (jpf.salary_year_avg IS NOT NULL)
     LIMIT 20
